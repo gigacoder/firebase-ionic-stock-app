@@ -1,0 +1,32 @@
+<ion-view view-title="Account">
+  <ion-content>
+    <ion-list>
+    <ion-toggle  ng-model="settings.enableFriends">Push Notification</ion-toggle>
+    <div class="item range">
+      <label>Sound</label>
+  <i class="icon ion-volume-low"></i>
+  <input type="range" name="volume">
+  <i class="icon ion-volume-high"></i>
+</div>
+<label class="item item-input item-select">
+    <div class="input-label">
+      Theme
+    </div>
+    <select>
+      <option>Blue</option>
+      <option selected>Green</option>
+      <option>Red</option>
+    </select>
+  </label>
+    <ion-toggle  ng-model="settings.enableFriends">Vibration</ion-toggle>
+    <ion-radio ng-model="choice" ng-value="'A'">Choose A</ion-radio>
+    <ion-radio ng-model="choice" ng-value="'B'">Choose B</ion-radio>
+
+
+    <a class="item item-icon-left" href="#login">
+      <i class="icon ion-plus"></i>
+      Logout
+    </a>
+    </ion-list>
+  </ion-content>
+</ion-view>

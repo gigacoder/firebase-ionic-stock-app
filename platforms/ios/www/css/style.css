@@ -1,0 +1,54 @@
+/* Empty. Add your own CSS if you like */
+.hyapps-dark-bg{
+  background: #363434;
+}
+.hyapps-login-container{
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 35%;
+  transform: translateY(-35%);
+}
+.hyapps-img-responsive{
+  width: 100%;
+}
+.tab-item{
+  color: #ffffff !important;
+}
+.tab-item.tab-item-active, .tab-item.active, .tab-item.activated,.tab-item:hover, .tab-item:focus, .tab-item:active{
+  color: #4DB74D !important;
+}
+.hyapps-no-padding{
+  padding: 0px;
+  min-width: 25px;
+  background: #ffffff;
+}
+.hyapps-green-text{
+  color: #4DB74D;
+}
+.hyapps-red-text{
+  color: #cc0000;
+}
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    background-color: rgb(250, 255, 189);
+    background-image: none;
+    color: rgb(0, 0, 0);
+    -webkit-box-shadow: 0 0 0px 1000px #eee inset;
+
+}
+.popup{
+  height: 70%;
+    width: 70%;
+}
+.hyapps-popup-close-button{
+  position: absolute;
+  z-index: 99;
+  top: -30px;
+  right: -15px;
+}
+.hyapps-green-icon{
+  color: #009933 !important;
+  line-height: 1;
+  font-size: 24px;
+}

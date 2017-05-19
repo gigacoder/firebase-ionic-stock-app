@@ -1,0 +1,30 @@
+<ion-view view-title="Add Member">
+  <ion-content class="has-header padding">
+
+    <h1>Edit Product</h1>
+
+    <form class="form-horizontal" name="edit_form" role="form" ng-controller="EditController">
+
+
+      <div class="list">
+        <label class="item item-input item-floating-label">
+          <input type="text" id="Name" ng-model="companyname.Name" placeholder="SKU">
+        </label>
+        <p>
+          {{tickers.Price}}
+        </p>
+        <label class="item item-input item-floating-label">
+          <input type="text" id="LastPrice" ng-model="companyname.Price" placeholder="Description">
+        </label>
+
+      </div>
+      <button ng-click="editProduct()" id="submit" type="submit" class="button button-positive">Update</button>
+
+
+
+
+
+    </form>
+
+  </ion-content>
+</ion-view>

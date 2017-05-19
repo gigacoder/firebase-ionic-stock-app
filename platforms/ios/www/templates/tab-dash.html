@@ -1,0 +1,75 @@
+<ion-view view-title="Stock Details">
+  <ion-content class="has-header" ng-controller="DashCtrl">
+    <!-- <p>
+        <a ng-href="#/tab/add" class="button button-calm" role="button">Add New Product</a>
+    </p> -->
+
+
+  <div class="list" ng-controller="ListController">
+
+  
+
+    <div class="item item-button-right"  ng-repeat="tickers in myCompany">
+
+      <div class="row">
+        <div class="col col-90">
+          <span>{{tickers.Name}}</span>
+            <br>
+          <span class="hyapps-green-text">{{tickers.Price}}</span>
+            <br>
+            <span class="">{{tickers.Category}}</span>
+        </div>
+
+        <div class="col col-5">
+          <a class="button icon ion-edit hyapps-green-text hyapps-no-padding" ng-href="#/edit/{{tickers.$id}}"></a>
+        </div>
+        <div class="col col-5">
+          <button class="button icon hyapps-red-text ion-close-round hyapps-no-padding"  ng-click="removeProduct(tickers.$id)"></button>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+<!-- <div class="list" ng-controller="ListController">
+
+  <div class="item item-button-right"  ng-repeat="product in products">
+    <div class="row">
+      <div class="col col-60">
+        {{product.sku}}<br>
+      </div>
+      <div class="col col-20">
+        {{product.description}}<br>{{product.price}}
+      </div>
+      <div class="col col-10">
+        <button class="button button-positive" ng-href="#/edit/{{product.$id}}" >Edit</button>
+      </div>
+      <div class="col col-10">
+        <button class="button button-assertive"  ng-click="removeProduct(product.$id)">Delete</button>
+      </div>
+    </div>
+
+  </div>
+
+
+</div>
+
+<p>
+    <a ng-href="#/add" class="button button-calm" role="button">Add New Product</a>
+</p> -->
+
+
+
+
+</ion-content>
+</ion-view>

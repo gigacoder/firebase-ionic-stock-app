@@ -1,0 +1,40 @@
+<ion-view>
+  <ion-content scroll="true">
+
+
+
+    <div ng-controller="PortfolioController" >
+
+      <button class="button button-icon icon ion-ios-close-outline hyapps-popup-close-button" ng-click="popupclose()"></button>
+
+      <div class="item item-input-inset">
+        <form ng-submit="addMessage()" name="addPortfolio">
+          <label class="item-input-wrapper">
+            <input type="text" ng-model="newMessageText" name="newMessageText"/>
+            <button class="button-clear icon ion-plus-round hyapps-green-icon" type="submit"></button>
+          </label>
+          <!-- <div class="text-center padding">
+            <button type="submit" class="button  button-calm">Add</button>
+          </div> -->
+        </form>
+       </div>
+
+      <div class="list list-inset" >
+        <div class="item item-input" ng-repeat="message in categoryList">
+          <input type="text" ng-model="message.text" ng-change="categoryList.$save(message)" />
+          <!-- <button ng-click="categoryList.$remove(message)">Delete Message</button> -->
+          <a class="button button-icon icon ion-ios-trash" ng-click="categoryList.$remove(message)"></a>
+        </div>
+      </div>
+
+      <!-- push a new message onto the array -->
+      <!-- <form ng-submit="addMessage()">
+        <input ng-model="newMessageText" />
+        <button type="submit">Add Message</button>
+      </form> -->
+    </div>
+
+
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,110 @@
+<ion-view view-title="Add Ticker">
+  <ion-content class="has-header padding"  scroll="false">
+    <h4>Add New Product</h4>
+    <div class="" ng-controller="AddController">
+
+      <div ng-controller="PopupCtrl">
+        <button class="button button-dark" ng-click="showPopup()">
+          Add New Category
+        </button>
+      </div>
+      <!-- popup div ends here -->
+
+      <form class="form-horizontal" role="form" ng-controller="AddController">
+        <div class="form-group">
+
+          <div class="item item-input-inset">
+            <label class="item-input-wrapper">
+              <input type="text" placeholder="Search Ticker" class="form-control" name="symbol" ng-model="symbol" >
+            </label>
+            <button class="button button-small button-balanced" ng-click="getData()">
+              Go
+            </button>
+          </div>
+
+          <div class="list">
+            <label class="item item-input item-select">
+              <div class="input-label">
+                Categories
+              </div>
+              <select ng-model="result.Category" ng-options="portfolio.text for portfolio in portfolioCategory"></select>
+            </label>
+
+            <label class="item item-input">
+              <input type="text" id="" ng-model="result.Name" placeholder="Enter Ticker">
+            </label>
+            <label class="item item-input">
+              <input type="text" id="LastPrice" ng-model="result.LastPrice" placeholder="Bid Price">
+            </label>
+          </div>
+
+          <div class="row">
+            <div class="col text-center">
+              <button ng-click="addProduct()" class="button  icon-right ion-plus button-large button-calm">Add</button>
+            </div>
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </ion-content>
+</ion-view>
+
+
+<!-- <form class="form-horizontal" role="form" ng-controller="AddController">
+
+
+<div class="list">
+<label class="item item-input item-stacked-label">
+<span class="input-label">SKU: </span>
+<input type="text" id="sku" ng-model="product.sku" placeholder="SKU">
+</label>
+
+
+<label class="item item-input item-stacked-label">
+<span class="input-label">Description:</span>
+<input type="text" id="description" ng-model="product.description" placeholder="Description">
+</label>
+
+
+<label class="item item-input item-stacked-label">
+<span class="input-label">Price:</span>
+<input type="number" id="price" type="number" step="any" ng-model="product.price" placeholder="9.99">
+</label>
+
+
+</div>
+<button ng-click="addProduct()" class="button button-positive">Add</button>
+
+</form> -->
+
+<!-- <label>Ticker Symbol</label>
+<div class="row">
+<div class="col col-80">
+<input type="text" placeholder="Enter Symbol" class="form-control" name="symbol" ng-model="symbol" />
+</div>
+<div class="col col-20">
+<button class="button button-energized" ng-click="getData()">G0</button>
+</div>
+</div> -->
+<!-- <br/>
+<br/>
+{{result.Exchange}} <br/>
+{{result.MarketCap}} <br/>
+{{result.LastPrice}} <br/>
+{{result.PercentChange}} <br/>
+{{result.YearRange}} <br/> -->
+
+<!-- <div class="list">
+<label class="item item-input item-stacked-label">
+<input type="text" id="Name" ng-model="result.Name" placeholder="Enter Ticker">
+</label>
+<p>
+
+</p>
+
+<label class="item item-input item-stacked-label">
+<input type="text" id="LastPrice" ng-model="result.LastPrice" placeholder="Description">
+</label>
+
+</div> -->
